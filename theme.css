@@ -1,3 +1,12 @@
+/*
+============================================
+; Title: css file for web330
+; Author: Chris Harris
+; Date: 21 March 2021
+; css file for the course
+;===========================================
+*/
+
 .card {
     background-color: var(--card-background-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
