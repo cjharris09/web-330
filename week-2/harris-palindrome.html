@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<!--
+============================================
+; Title: Assignment 2.2
+; Author: Chris Harris
+; Date: 28 March 2021
+; Description: This is an exercise that integrates inputs and conversions 
+;===========================================
+-->
+<html lang="en"> 
+    <head>
+        <title>WEB 330 – Enterprise JavaScript II</title>
+        <link href="../site.css" type="text/css" rel="stylesheet" />
+        <link href="../theme.css" type="text/css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script type="application/javascript" src="../theme.js"></script>
+
+        
+    </head>
+    <body>
+        <div id="container">
+            
+            <h1 class="app-header">Welcome to the Palindrome App!</h1>
+            <div id="form">
+                <!--user inputs phrase and button submits input -->
+            <div class="card">
+                <div class="card-title">Palindrome Checker</div>
+                <div class="card-content">
+                    <div class="form">
+                        <div class="form-field">
+                            <label for="txtFahrenheit">Phrase Value:</label>
+                            <input type="text" id="txtPhrase">
+                        </div>
+                        <!-- This is the button that the user will use to submit input -->
+                        <div class="form-field">
+                            <button type="button" class="btn btn-primary full-width" id="bthCheckPhase">Palindrome Results</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="return-home" href="../index.html">Return</a>
+            </div>
+            
+            <!--The conversion results-->
+            <div id="form-results">
+                <div class="card">
+                    <div class="card-title">Palindrome Results</div>
+                    <div id="assign-results-header"></div>
+                    <div id="assign-results" class="assign-results-text">
+
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+        </div>
+
+        <!--JavaScript functions-->
+        <script>
+
+            function getTodaysDate(){
+                let date = new Date().toLocaleDateString();
+                return date;
+
+            }
+
+            function getLength(string){
+                let stringValue = string.length;
+                return stringValue;
+            }
+
+            function reverse(string){
+                let stringSplit = string.split("");
+                let reverseString = stringSplit.reverse();
+                let join = reverseString.join("");
+                return join;
+            }
+
+            function isPalindrome(string){
+                let compare = '';
+                if (reverse(string) === string){
+                    
+                    compare = `${string} <u><b>is</b></u> a palindrome` ;
+                } else{
+                    
+                    compare = `${string} <u><b>is</b></u> not a palindrome`;
+                }
+                document.getElementById("assign-results").innerHTML = compare;
+            }
+            
+
+            document.getElementById("bthCheckPhase").onclick = function(){
+                
+                var txtPhrase = document.getElementById("txtPhrase").value.toLowerCase();
+                let assignResults = document.getElementById("assign-results"); 
+                
+                let today = getTodaysDate();
+                console.log(today)
+                let len = getLength(txtPhrase);
+                console.log(len)
+                let reversedPhrase = reverse(txtPhrase);
+                console.log(reversedPhrase)
+                let header = `Date: ${today} <br> Original Phrase: ${txtPhrase} <br> Reversed Phrase: ${reversedPhrase} <br> Phrase Length: ${len}`
+                document.getElementById("assign-results-header").innerHTML = header;
+
+                isPalindrome(txtPhrase)
+                    //let compare = ''
+                    //if (isPalindrome() = true){
+                    //    compare = `${string} is a palindrome`
+                    //} else {
+                    //    compare = `${string} is not a palindrome`
+                    //}
+                    //document.getElementById("assign-results"). innerHTML = compare;
+                
+
+
+
+                
+
+
+            }
+
+
+            
+        
+        </script>
+
+
+    </body>
+</html>

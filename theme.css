@@ -7,11 +7,25 @@
 ;===========================================
 */
 
+/*
+============================================
+; Title: css file for web330
+; Author: Chris Harris
+; Date: 21 March 2021
+; css file for the course
+;===========================================
+*/
+
 .card {
     background-color: var(--card-background-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     
+}
+
+h1 {
+    font-weight: 400;
+    text-align: center;
 }
 
 .card-title {
@@ -142,3 +156,146 @@ h2, h3, h4 {
     border: 1px;
     border-color: var(--heading-border-color);
 }
+
+
+
+
+
+h1 {
+    font-weight: 400;
+    text-align: center;
+}
+
+
+#container {
+    padding: 10px;
+}
+
+#form {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+#form-results {
+    width: 600px;
+    margin: 3% auto 0 ;
+}
+
+#results {
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+}
+
+#letter-results{
+    text-align: center;
+    font-size: 28px;
+}
+
+body {
+    font-family: "Oswald", Verdana, Arial, sans-serif; 
+    
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    /*width: 50%;*/
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: #4F3674;
+    font-weight: 400;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px 32px;
+    color: #000;
+}
+
+.input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: #4F3674;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.form {
+    display: inline-grid;
+    grid-template-columns: auto;
+}
+
+.form-field {
+    padding: 20px;
+}
+
+/*Styling for the Drop down menu*/
+.drop-down-menu {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*return home in exercise */
+.return-home {
+    color: #4F3674;
+    text-decoration: none;
+    padding-top: 10px;
+}
+/*return home in exercise */
+.return-home :hover {
+    background-color: #d6a800;
+    color:#4F3674;
+}
+/*return home in exercise */
+.return-home :visited {
+    color: #3C275A;
+}
+
+#assign-results{
+    text-align: center;
+    font-size: 28px;
+}
+
+#assign-results-header{
+    padding: 10px;
+}
+
+
