@@ -5,7 +5,7 @@
 ; Title: Assignment 2.2
 ; Author: Chris Harris
 ; Date: 28 March 2021
-; Description: This is an exercise that integrates inputs and conversions 
+; Description: Week 2 palindrome app.
 ;===========================================
 -->
 <html lang="en"> 
@@ -56,32 +56,29 @@
                 </div>
             </div>
             
-
-
-
         </div>
 
         <!--JavaScript functions-->
         <script>
-
+            // Function that will get the date
             function getTodaysDate(){
                 let date = new Date().toLocaleDateString();
                 return date;
 
             }
-
+            //Function to determine the length of a string
             function getLength(string){
                 let stringValue = string.length;
                 return stringValue;
             }
-
+            //Function that reverses a string
             function reverse(string){
                 let stringSplit = string.split("");
                 let reverseString = stringSplit.reverse();
                 let join = reverseString.join("");
                 return join;
             }
-
+            //Function that will compare strings and print to the assign-results div 
             function isPalindrome(string){
                 let compare = '';
                 if (reverse(string) === string){
@@ -94,7 +91,7 @@
                 document.getElementById("assign-results").innerHTML = compare;
             }
             
-
+            //onClick function that the user will click on after an input
             document.getElementById("bthCheckPhase").onclick = function(){
                 
                 var txtPhrase = document.getElementById("txtPhrase").value.toLowerCase();
@@ -110,6 +107,9 @@
                 document.getElementById("assign-results-header").innerHTML = header;
 
                 isPalindrome(txtPhrase)
+
+                //I was trying to get this section of code to work outside of the function by comparing the result of the function as true or false
+                // I am sure that it is possible but I could not find out how to do it. 
                     //let compare = ''
                     //if (isPalindrome() = true){
                     //    compare = `${string} is a palindrome`
