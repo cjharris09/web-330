@@ -144,11 +144,12 @@
 
         <!--JavaScript functions-->
         <script type="module">
-            // the serSelectedTheme would only work if I commented out the import command
-            setSelectedTheme();
+            
             // this import command imports the information form the index.js file
             import { Bill, Beverage, Appetizer, MainCourse, Dessert } from "./index.js";
             // this is the onclick function that gets the tally of the items selected
+            // the serSelectedTheme to call the dark mode when it is selected.
+            setSelectedTheme();
             document.getElementById("btnPlaceOrder").onclick = function(){
                 const beveragesEL = document.getElementById("beverages");
                 const beverages = beveragesEL.getElementsByTagName("input");
