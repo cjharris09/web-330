@@ -4,8 +4,12 @@
 ============================================
 ; Title: Assignment 3.2
 ; Author: Chris Harris
-; Date: 28 March 2021
-; Description: Week 2 palindrome app.
+; Date: 4 April 2021
+; Description: Week 3 Restaurant app.
+; I used the helpful website https://grid.layoutit.com/ when creating the grid layout. I do not think that it is correct as the lineup is incorrect of the menu title but I could
+; not figure it out. 
+; Also I downloaded a new extension called live server that fixed an error that was presenting when I first started where because I was trying to open the files locally 
+; It was not allowed on chrome so that issue was solved with this extension. 
 ;===========================================
 -->
 <html lang="en"> 
@@ -26,7 +30,7 @@
     </head>
     <body class="light-theme">
         <div id="container">
-            
+            <!--This is the Title div-->
             <div class="app-header" >Welcome to the Restaurant App!</div>
             <div class="assign-content">
                 
@@ -35,7 +39,7 @@
 
                 <div class="card menu">
                     <div class="card-title">Restaurant Menu</div>
-
+                <!--This is the first div in the card beverages div-->
                 <div class="card-child bev" >
                     <div class="card-title">Beverages</div>
                     <div class="card-content" id="beverages">
@@ -56,7 +60,7 @@
                         </label>
                     </div>
                 </div>
-
+                <!--This is the second div in the card apps div-->
                 <div class="card-child app" >
                     <div class="card-title">Appetizers</div>
                     <div class="card-content" id="appetizers">
@@ -77,7 +81,7 @@
                         </label>
                     </div>
                 </div>
-
+                <!--This is the third div in the card main div-->
                 <div class="card-child main">
                     <div class="card-title">Main Courses</div>
                     <div class="card-content" id="main-courses">
@@ -98,7 +102,7 @@
                         </label>
                     </div>
                 </div>
-
+                <!--This is the third div in the card main div-->
                 <div class="card-child dess">
                     <div class="card-title">Desserts</div>
                     <div class="card-content" id="desserts">
@@ -125,7 +129,7 @@
             <a class="return-home" href="../index.html">Return</a>
             </div>
             
-            
+            <!--This div is where the order summary will go-->
             <div id="form-results">
                 <div class="card">
                     <div class="card-title">Order Summary</div>
@@ -140,10 +144,11 @@
 
         <!--JavaScript functions-->
         <script type="module">
+            // the serSelectedTheme would only work if I commented out the import command
             setSelectedTheme();
-
+            // this import command imports the information form the index.js file
             import { Bill, Beverage, Appetizer, MainCourse, Dessert } from "./index.js";
-            
+            // this is the onclick function that gets the tally of the items selected
             document.getElementById("btnPlaceOrder").onclick = function(){
                 const beveragesEL = document.getElementById("beverages");
                 const beverages = beveragesEL.getElementsByTagName("input");
@@ -159,7 +164,7 @@
 
                 let bill = new Bill()
                 {
-
+                    // this for loop finds which items are tallied in beverages
                     for (let beverage of beverages)
                     {
                         if (beverages.checked)
@@ -167,7 +172,7 @@
                             bill.addBeverage(new Beverage(beverage.name, beverage.value));
                         }
                     }
-
+                    // this for loop finds which items are tallied in appetizers
                     for (let appetizer of appetizers)
                     {
                         if (appetizers.checked)
@@ -175,7 +180,7 @@
                             bill.addAppetizer(new Appetizer(appetizer.name, appetizer.value));
                         }
                     }
-
+                    // this for loop finds which items are tallied in main courses
                     for (let mainCourse of mainCourses)
                     {
                         if (mainCourse.checked)
@@ -183,7 +188,7 @@
                             bill.addMainCourse(new MainCourse(mainCourse.name, mainCourse.value));
                         }
                     }
-
+                    // this for loop finds which items are tallied in dessert
                     for (let dessert of desserts)
                     {
                         if (desserts.checked)
@@ -193,10 +198,11 @@
                     }
                 
                 }
+                //constant to hold the total value from the getTotal function 
                 const total = bill.getTotal();
                 
-
-                document.getElementById("order-total").innerHTML = `Your order total is ${total} `;
+                // a html injection of the total variable
+                document.getElementById("order-total").innerHTML = `Your order total is $${total} `;
             }
         
 
