@@ -1,0 +1,15 @@
+/*
+============================================
+; Title: Assignment 4.2
+; Author: Chris Harris
+; Date: 11 April 2021
+; Description: Week 4 calorie app.
+;===========================================
+*/
+/*css class for the foodList that will display it in red and floats it right*/
+#foodList {
+    float: right;
+    color: #df546a;
+    font-size: 12px;
+    letter-spacing: 2px;
+}

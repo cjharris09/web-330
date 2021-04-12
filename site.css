@@ -34,18 +34,14 @@ h1, h2, h3, h4 {
     padding: 10px;
 }
 
-a {
-    color: #453674;
-    text-decoration: none;
-}
-
-a :hover {
-    background-color: #d6a800;
-    color: #4f3674;
-}
-
 a :visited {
     color: #3c275a;
+}
+
+.app-header{
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
 }
 
 .return-home {

@@ -32,6 +32,8 @@ h1 {
     font-size: 2em;
     color: var(--card-title-color);
     font-weight: 400;
+
+    
 }
 
 .card-content {
@@ -108,6 +110,13 @@ body.light-theme{
     --btn-hover-background-color: #d6A800;
     --btn-hover-color: #4f3674;
     --input-border-color: #ccc;
+
+    --table-header-background-color: #4F3674;
+    --table-header-color: #fff;
+    --table-border-color: #ddd;
+    --table-hover-background-color: #D6A800;
+    --table-hover-color: #4F3674;
+
 }
 
 body.dark-theme{
@@ -128,17 +137,50 @@ body.dark-theme{
     --btn-hover-background-color: #7d4787;
     --btn-hover-color: #fff;
     --input-border-color: #303030;
+
+    --table-header-background-color: #D176E1;
+    --table-header-color: #fff;
+    --table-border-color: #303030;
+    --table-hover-background-color: #7D4787;
+    --table-hover-color: #fff;
+
 }
 
-a {
-    color: var(--anchor-color);
-    text-decoration: none;
+table {
+    border-collapse: collapse;
+    width: 25%;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-a :hover {
-    background-color: var(--anchor-hover-background-color);
-    color: var(--anchor-hover-color);
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4f3674;
+    color: white;
+
+    background-color: var(--table-header-background-color);
+    color: var(--table-header-color) ;
 }
+
+th, td {
+    border: 1px solid #aaa;
+    text-align: left;
+    text-align: center;
+
+    border-color: var(-table-border-color) ;
+}
+
+table:hover{
+    background-color: var(--table-hover-background-color);
+    color: var(--table-hover-color);
+    cursor: pointer;
+}
+
+
+
+
 
 h1{
     color: var(--heading-color);
@@ -165,11 +207,7 @@ h1 {
     text-align: center;
 }
 
-.app-header{
-    font-size: 30px;
-    font-weight: 400;
-    text-align: center;
-}
+
 
 
 #container {
@@ -192,15 +230,9 @@ h1 {
     padding: 15px;
 }
 
-#letter-results{
-    text-align: center;
-    font-size: 28px;
-}
 
-body {
-    font-family: "Oswald", Verdana, Arial, sans-serif; 
-    
-}
+
+
 
 
 .card {
@@ -209,12 +241,7 @@ body {
     /*width: 50%;*/
 }
 
-.card-title {
-    text-align: center;
-    font-size: 2em;
-    color: #4F3674;
-    font-weight: 400;
-}
+
 
 .card-content {
     padding: 2px 16px;
@@ -280,18 +307,28 @@ body {
 
 /*return home in exercise */
 .return-home {
-    color: #4F3674;
+    color: var(--anchor-color);
     text-decoration: none;
     padding-top: 10px;
 }
 /*return home in exercise */
 .return-home :hover {
-    background-color: #d6a800;
-    color:#4F3674;
+    background-color: var(--anchor-hover-background-color);
+    color: var(--anchor-hover-color);
 }
 /*return home in exercise */
 .return-home :visited {
     color: #3C275A;
+}
+
+a {
+    color: var(--anchor-color);
+    text-decoration: none;
+}
+
+a :hover {
+    background-color: var(--anchor-hover-background-color);
+    color: var(--anchor-hover-color);
 }
 
 #assign-results{
