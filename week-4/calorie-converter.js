@@ -3,7 +3,7 @@
 ; Title: Assignment 4.2
 ; Author: Chris Harris
 ; Date: 11 April 2021
-; Description: Week 4 calorie app.
+; Description: calorie-converter.js file.
 ;===========================================
 */
 // imports the FoodModel function from the food-model.js file

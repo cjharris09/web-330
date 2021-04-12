@@ -3,7 +3,7 @@
 ; Title: Assignment 4.2
 ; Author: Chris Harris
 ; Date: 11 April 2021
-; Description: Week 4 calorie app.
+; Description: food-model.js file.
 ;===========================================
 */
 
