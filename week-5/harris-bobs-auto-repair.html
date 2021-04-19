@@ -28,6 +28,7 @@
                 <!--user inputs item and the button submits input -->
             <div class="card">
                 <div class="card-title">Product Listing<br>
+                    <!--This is the component that is formed in the cart-component.js file to form the shopping cart-->
                     <cart-component></cart-component>
                 </div>
                 
@@ -74,33 +75,36 @@
         <script type="module">
             setSelectedTheme();
 
+            //importing the classes from the js files
             import { Product } from "./product.js";
             import { ShoppingCart } from "./shopping-cart.js";
 
+            //creating a variable for the shopping cart function
             let shoppingCart = new ShoppingCart();
 
 
             setCartCount();
 
+            //onclick function for the submit button
             document.getElementById("btnAddProduct").onclick = function(){
                 let productList = document.getElementById("productList");
-                
                 let product = productList.options[productList.selectedIndex].text;
                 let productValue = productList.options[productList.selectedIndex].value;
-               console.log(shoppingCart.count());
 
-
+                //if statement that evaluates the selection inputted by the user
                 if (product != "--Select--"){
                     shoppingCart.add(new Product(product, productValue));
                     setCartCount();
                     alert(`${product} was added to your shopping cart`);
                 }
         }
+        //sets the number of objects in the products array
         function setCartCount(){
                 document.getElementById("cart-count").innerHTML = shoppingCart.count();
 
             }
 
+            //onclick function that builds the table when the shopping cart icon is clicked on
         document.getElementById("cartIcon").onclick = function(){
             let cartDisplayTable = `
                 <thead>
