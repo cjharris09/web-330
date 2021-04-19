@@ -1,0 +1,21 @@
+#cart-message {
+    float: right;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+#cart-message:hover{
+    cursor: pointer;
+}
+
+.fa-shopping-cart{
+    text-align: center;
+}
+
+#cartIcon{
+    align-items: center;
+}
+
+cart-component{
+align-items: center;
+}
