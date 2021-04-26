@@ -1,3 +1,12 @@
+ /*--
+============================================
+; Title: Assignment 6.2
+; Author: Chris Harris
+; Date: 25 April 2021
+; Description: .
+;===========================================
+*/
+
 export class FloatMinField{
     constructor(name, field, min){
         this.name = name;

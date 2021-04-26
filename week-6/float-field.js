@@ -1,3 +1,11 @@
+ /*--
+============================================
+; Title: Assignment 6.2
+; Author: Chris Harris
+; Date: 25 April 2021
+; Description: .
+;===========================================
+*/
 export class FloatField{
     constructor(name, field){
         this.name = name;

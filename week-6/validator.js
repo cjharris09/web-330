@@ -1,3 +1,12 @@
+ /*--
+============================================
+; Title: Assignment 6.2
+; Author: Chris Harris
+; Date: 25 April 2021
+; Description: .
+;===========================================
+*/
+
 import { RequiredField } from "./required-field.js"
 import { FloatField } from "./float-field.js"
 import { FloatMinField } from "./float-min-field.js"

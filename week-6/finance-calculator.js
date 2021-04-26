@@ -1,3 +1,12 @@
+ /*--
+============================================
+; Title: Assignment 6.2
+; Author: Chris Harris
+; Date: 25 April 2021
+; Description: .
+;===========================================
+*/
+
 export class FinanceCalculator{
     static MONTHS_IN_A_YEAR = 12;
     static calculateFutureValue(monthlyPayment, rate, years){
