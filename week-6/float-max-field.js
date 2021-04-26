@@ -3,7 +3,7 @@
 ; Title: Assignment 6.2
 ; Author: Chris Harris
 ; Date: 25 April 2021
-; Description: .
+; Description: the float-max-field.js.
 ;===========================================
 */
 export class FloatMaxField{

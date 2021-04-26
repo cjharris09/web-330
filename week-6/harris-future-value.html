@@ -117,13 +117,18 @@
         <!--JavaScript functions-->
         <script type="application/javascript" src="../theme.js"></script>
         <script type="module">
+            //set the selected theme that i am using.
             setSelectedTheme();
 
+            //import from the js files that need to be used
             import { FinanceCalculator } from "./finance-calculator.js";
             import { Validator } from "./validator.js";
 
+            //create todays date and display it in the today span
             document.getElementById("today").innerHTML = new Date().toLocaleDateString("en-US");
 
+
+            //onclick function that is performed.
             document.getElementById("btnCalculate").onclick = function(){
                 let monthlyPayment = document.getElementById("txtMonthlyPayment").value;
                 
@@ -132,13 +137,14 @@
                 let years = document.getElementById("listNumOfYears").value;
                 let errorLogEl = document.getElementById("errorLog");
                 
-
+                //creates a new Validator object
                 let monthlyPaymentValidator = new Validator("Monthly Payment", monthlyPayment);
 
                 monthlyPaymentValidator.addRequiredField();
                 monthlyPaymentValidator.addRequiredFieldFloat();
                 monthlyPaymentValidator.addFloatMinField(100)
 
+                //creates a new Validator object
                 let rateValidator = new Validator("Interest Rate", rate);
 
                 rateValidator.addRequiredField();
