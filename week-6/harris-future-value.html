@@ -177,7 +177,7 @@
                     errorLogEl.innerHTML = "";
                     let errorLogMessage = "<ul>";
                     for (const message of errorLog) {
-                        errorLogMessage += "<li>" + message + "</li>";
+                        errorLogMessage += `<li> ${message} </li>`;
                     } 
                     errorLogMessage += "</ul>";
                     errorLogEl.innerHTML = errorLogMessage; 
